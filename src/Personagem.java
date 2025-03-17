@@ -12,9 +12,9 @@ class Personagem extends  Ser{
         return cartas.add(c);
     }
 
-    public void usarCard(Cards c){
+    public void usarCard(Cards c, Criaturas criatura){
         if(c.acessoLiberado(this)){
-
+            c.usoDaCard(criatura);
         }
     }
 

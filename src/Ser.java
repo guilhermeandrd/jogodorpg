@@ -37,7 +37,7 @@ public abstract class Ser {
     }
 
     public int getDefesa() {
-        return forca * 2;
+        return forca;
     }
 
     public Classe getClasse() {

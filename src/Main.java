@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Main {
 
     public static void main(String[] args) {
@@ -11,11 +13,16 @@ class Main {
         Personagem Thartra = new Personagem("Thartra", 60, 20, 10, 25, Classe.GUERREIRO);
         Criaturas Zumbi = new Criaturas("Zumbi", 30, 10, 40, 0, Classe.MAGO);
 
-        System.out.println("Hello World!");
+        while(Thartra.getVida()>0||Zumbi.getVida()>0){
+            Thartra.usarCard(Espada, Zumbi);
+            Zumbi.atacar(Thartra);
+        }
 
-        System.out.println(Kohaku);
-
-
+        if(Zumbi.getVida()>0){
+            System.out.println("Zumbi venceu!");
+        }else{
+            System.out.println("Thartra venceu!");
+        }
     }
 
 
