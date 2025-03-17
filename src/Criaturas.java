@@ -9,6 +9,8 @@ public class Criaturas extends Ser{
         if(p.getDefesa()<getAtaque()){
             p.setVida(p.getVida()-getAtaque());
             return true;
+        }else{
+            System.out.println("Erro ao atacar");
         }
 
         return false;
