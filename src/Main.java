@@ -10,19 +10,23 @@ class Main {
         Cards CuraMudana = new Cards("Cura com itens mudanos", "Se cura como um médico", 5, 13,Classe.INVENTOR, Tipos.CURA);
         Cards CuraForcada = new Cards("Cura por pretigio fisico", "Você força o seu corpo a bombear mais sangue para as outras partes, acelerando o processo de cura", 5 , 15 , Classe.GUERREIRO, Tipos.CURA);
 
-        Personagem Thartra = new Personagem("Thartra", 60, 20, 10, 25, Classe.GUERREIRO);
-        Criaturas Zumbi = new Criaturas("Zumbi", 30, 10, 40, 0, Classe.MAGO);
+        //Personagem Thartra = new Personagem("Thartra", 20, 25, 10 , Classe.GUERREIRO, 1);
+        Criaturas Zumbi = new Criaturas("Zumbi", 30, 10, 40, 9, Classe.MAGO );
 
-        while(Thartra.getVida()>0||Zumbi.getVida()>0){
+        /*while(Thartra.getVida()>0||Zumbi.getVida()>0){
             Thartra.usarCard(Espada, Zumbi);
             Zumbi.atacar(Thartra);
-        }
+        }*/
 
         if(Zumbi.getVida()>0){
             System.out.println("Zumbi venceu!");
         }else{
             System.out.println("Thartra venceu!");
         }
+
+        Guerreiro Thartra = new Guerreiro("Guerreiro", 30, 10, 40, 9);
+
+        System.out.println(Thartra.getVida());
     }
 
 

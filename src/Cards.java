@@ -32,7 +32,7 @@ public class Cards {
 
     public void usoDaCard(Criaturas c){
         if(c.getDefesa()<getRequisito()){
-            c.setVida(c.getVida()-(getValor()*0.5));
+            c.setVida(c.getVida()-(getValor()));
         }else{
             System.out.println("Uso da carta não foi realizado");
         }

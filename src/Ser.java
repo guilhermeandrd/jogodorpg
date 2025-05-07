@@ -1,17 +1,20 @@
 public abstract class Ser {
     private String nome;
-    private double vida;
+    private int vida;
     private int forca;
     private int poder;
     private int qi;
     private Classe classe;
+    private int nivel;
+    private int constituicao;
+    private int mana;
 
-    public Ser(String nome, double vida, int forca, int poder, int qi, Classe classe) {
+    public Ser(String nome, int forca, int qi,int constituicao, int nivel,  Classe classe) {
         this.nome = nome;
-        this.vida = vida;
         this.forca = forca;
-        this.poder = poder;
         this.qi = qi;
+        this.constituicao = constituicao;
+        this.nivel = nivel;
         this.classe = classe;
     }
 
@@ -20,7 +23,7 @@ public abstract class Ser {
         return nome;
     }
 
-    public double getVida() {
+    public int getVida() {
         return vida;
     }
 
@@ -44,9 +47,10 @@ public abstract class Ser {
         return classe;
     }
 
-    public void setVida(double vida){
-        this.vida = vida;
+    public int getConstituicao() {
+        return constituicao;
     }
+
 
     public int atributoPrincipal(){
         if(classe == Classe.INVENTOR){
@@ -61,5 +65,13 @@ public abstract class Ser {
 
     @Override
     abstract public String toString();
+
+    public void setVida(int vida){
+        this.vida = vida;
+    };
+
+    public void setMana(int mana){
+        this.mana = poder;
+    }
 
 }

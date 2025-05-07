@@ -1,8 +1,7 @@
-
 public class Criaturas extends Ser{
 
-    public Criaturas(String nome, double vida, int forca, int poder, int qi, Classe classe) {
-        super(nome, vida, forca, poder, qi, classe );
+    public Criaturas(String nome, int forca, int qi, int constituicao, int nivel, Classe classe) {
+        super(nome, forca, qi, constituicao, nivel, classe);
     }
 
     public boolean atacar(Personagem p){
@@ -17,11 +16,11 @@ public class Criaturas extends Ser{
     }
 
     //vai depender do tipo mas vamos deixar como sendo poder por enquanto
-    public double getAtaque(){
-        double ataque;
+    public int getAtaque(){
+        int ataque;
 
         switch (getClasse()){
-            case MAGO -> ataque = getPoder() * 1.5;
+            case MAGO -> ataque = getPoder();
             case INVENTOR -> ataque = getQi() * 2;
             case GUERREIRO -> ataque = getForca() * 2;
             default -> ataque = 2;

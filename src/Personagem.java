@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 
-class Personagem extends  Ser{
+abstract class Personagem extends Ser{
     private ArrayList<Cards> cartas = new ArrayList<Cards>();
 
-
-    Personagem(String nome, double vida, int forca, int poder, int qi, Classe classe) {
-        super(nome, vida, forca, poder, qi, classe);
+    Personagem(String nome, int forca, int qi, int constituicao, int nivel, Classe classe) {
+        super(nome, forca, qi, constituicao, nivel, classe);
     }
 
     public boolean adicionarCard(Cards c){
