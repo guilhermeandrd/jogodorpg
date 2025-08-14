@@ -15,7 +15,6 @@ public class Criaturas extends Ser{
         return false;
     }
 
-    //vai depender do tipo mas vamos deixar como sendo poder por enquanto
     public int getAtaque(){
         int ataque;
 
