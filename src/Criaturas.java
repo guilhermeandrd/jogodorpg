@@ -1,7 +1,7 @@
 public class Criaturas extends Ser{
 
-    public Criaturas(String nome, int forca, int qi, int constituicao, int nivel, Classe classe) {
-        super(nome, forca, qi, constituicao, nivel, classe);
+    public Criaturas(String nome, int forca, int qi, int constituicao, int nivel) {
+        super(nome, forca, qi, constituicao, nivel);
     }
 
     public boolean atacar(Personagem p){
@@ -18,12 +18,6 @@ public class Criaturas extends Ser{
     public int getAtaque(){
         int ataque;
 
-        switch (getClasse()){
-            case MAGO -> ataque = getPoder();
-            case INVENTOR -> ataque = getQi() * 2;
-            case GUERREIRO -> ataque = getForca() * 2;
-            default -> ataque = 2;
-        }
 
         return ataque;
     }
